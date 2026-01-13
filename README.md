@@ -25,7 +25,7 @@ A self-built wearable that measures heart rate (HR), heart rate variability (HRV
   [ESP32-S3 Feather]
          │
 ┌────────────┼─────────────┐
-│ HR & HRV calc (SDNN) │
+│ HR & HRV calc (SDNN)    │
 │ Baseline tracking (EMA) │
 │ BLE advertiser (HR/HRV) │
 └────────────┼─────────────┘
@@ -36,7 +36,7 @@ Bluetooth Low Energy
 │
 ┌───────┴────────┐
 │ FocusPlotter.py│
-│ - BLE receive │
+│ - BLE receive  │
 │ - CSV logging │
 │ - Live plots │
 └────────────────┘
