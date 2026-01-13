@@ -18,31 +18,29 @@ A self-built wearable that measures heart rate (HR), heart rate variability (HRV
 
 ## 🧠 System Architecture
 
-  [MAX30102 Sensor]
-         │
- (I²C: SDA/SCL)
-         ↓
-  [ESP32-S3 Feather]
-         │
-┌────────────┼─────────────┐
-│ HR & HRV calc (SDNN)    │
-│ Baseline tracking (EMA) │
-│ BLE advertiser (HR/HRV) │
-└────────────┼─────────────┘
-│
-Bluetooth Low Energy
-↓
-[Laptop Python Script]
-│
-┌───────┴────────┐
-│ FocusPlotter.py│
-│ - BLE receive  │
-│ - CSV logging │
-│ - Live plots │
-└────────────────┘
+        [MAX30102 Sensor]
+               │
+        (I²C: SDA/SCL)
+               ↓
+       [ESP32-S3 Feather]
+               │
+  ┌──────────────────────────────┐
+  │  HR & HRV Calc (SDNN)        │
+  │  Baseline Tracking (EMA)     │
+  │  BLE Advertiser (HR/HRV)     │
+  └──────────────────────────────┘
+               │
+       Bluetooth Low Energy
+               ↓
+      [Laptop Python Script]
+               │
+       ┌────────────────────┐
+       │   FocusPlotter.py  │
+       │  • BLE receiver    │
+       │  • CSV logger      │
+       │  • Live plots      │
+       └────────────────────┘
 
-yaml
-Copy code
 
 ---
 
